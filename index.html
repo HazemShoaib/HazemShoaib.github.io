@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Hazem Shoaib | Data Analyst &amp; Python Developer</title>
+		<meta
+			name="description"
+			content="Portfolio of Hazem Shoaib, a freelance data analyst and Python developer specializing in web scraping, automated ETL pipelines, and predictive modeling."
+		/>
+
+		<!-- Tailwind CSS CDN -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				darkMode: 'class',
+				theme: {
+					extend: {
+						colors: {
+							brand: {
+								teal: '#14b8a6',
+							},
+						},
+					},
+				},
+			};
+		</script>
+
+		<!-- Font Awesome CDN -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body
+		class="bg-slate-950 text-slate-50 antialiased scroll-smooth selection:bg-teal-500/30 selection:text-slate-50"
+	>
+		<!-- Skip to content -->
+		<a
+			href="#main-content"
+			class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-full focus:bg-teal-500 focus:px-4 focus:py-2 focus:text-slate-950 focus:shadow-lg"
+		>
+			Skip to content
+		</a>
+
+		<!-- Header / Navbar -->
+		<header
+			id="site-header"
+			class="fixed inset-x-0 top-0 z-40 border-b border-slate-800/60 bg-slate-950/80 backdrop-blur"
+		>
+			<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex h-16 items-center justify-between">
+					<!-- Logo -->
+					<a href="#hero" class="flex items-center gap-2">
+						<span class="h-2 w-2 rounded-full bg-teal-400"></span>
+						<span class="text-sm font-semibold tracking-wide text-slate-100">
+							Hazem Shoaib
+						</span>
+					</a>
+
+					<!-- Desktop Nav -->
+					<div class="hidden items-center gap-8 md:flex">
+						<a
+							href="#about"
+							class="text-sm font-medium text-slate-300 hover:text-teal-400 transition-colors"
+						>
+							About
+						</a>
+						<a
+							href="#skills"
+							class="text-sm font-medium text-slate-300 hover:text-teal-400 transition-colors"
+						>
+							Skills
+						</a>
+						<a
+							href="#projects"
+							class="text-sm font-medium text-slate-300 hover:text-teal-400 transition-colors"
+						>
+							Projects
+						</a>
+						<a
+							href="#contact"
+							class="text-sm font-medium text-slate-300 hover:text-teal-400 transition-colors"
+						>
+							Contact
+						</a>
+					</div>
+
+					<!-- Mobile Nav Toggle -->
+					<button
+						id="mobile-nav-toggle"
+						class="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900/70 p-2 text-slate-200 shadow-sm hover:border-teal-500 hover:text-teal-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 md:hidden"
+						aria-label="Toggle navigation menu"
+						aria-expanded="false"
+						aria-controls="mobile-nav"
+					>
+						<i class="fa-solid fa-bars text-lg" aria-hidden="true"></i>
+					</button>
+				</div>
+
+				<!-- Mobile Nav Menu -->
+				<div id="mobile-nav" class="md:hidden hidden pb-4">
+					<div class="flex flex-col gap-2 border-t border-slate-800 pt-3">
+						<a
+							href="#about"
+							class="rounded-md px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-900 hover:text-teal-400"
+						>
+							About
+						</a>
+						<a
+							href="#skills"
+							class="rounded-md px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-900 hover:text-teal-400"
+						>
+							Skills
+						</a>
+						<a
+							href="#projects"
+							class="rounded-md px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-900 hover:text-teal-400"
+						>
+							Projects
+						</a>
+						<a
+							href="#contact"
+							class="rounded-md px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-900 hover:text-teal-400"
+						>
+							Contact
+						</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main id="main-content" class="pt-24 sm:pt-28">
+			<!-- Hero Section -->
+			<section
+				id="hero"
+				class="relative overflow-hidden border-b border-slate-800/60 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-950/95"
+			>
+				<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+					<div
+						class="grid gap-12 md:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] items-center"
+					>
+						<!-- Hero Text -->
+						<div data-animate="fade-up" class="space-y-6">
+							<p class="text-xs font-semibold uppercase tracking-[0.25em] text-teal-400">
+								Freelance Data Analyst &amp; Python Developer
+							</p>
+							<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+								From Raw Web to
+								<span class="block text-teal-400">
+									RAG-Ready Insights.
+								</span>
+							</h1>
+							<p class="max-w-xl text-sm sm:text-base text-slate-300">
+								I am a Data Engineer and Python Developer specializing in
+								bypassing complex website security to extract data, and using
+								LLMs to structure it for custom AI applications and business
+								analytics.
+							</p>
+
+							<!-- Highlighted USP -->
+							<div
+								class="inline-flex items-start gap-3 rounded-2xl border border-teal-500/60 bg-slate-950/80 px-4 py-3 text-xs text-slate-200 shadow-[0_0_30px_rgba(45,212,191,0.25)]"
+							>
+								<span
+									class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-teal-500/15 text-teal-400"
+									aria-hidden="true"
+								>
+									<i class="fa-solid fa-bolt"></i>
+								</span>
+								<div class="space-y-1">
+									<p class="font-semibold tracking-wide text-teal-300">
+										USP: Data pipelines for RAG-ready AI.
+									</p>
+									<p class="text-[11px] text-slate-300">
+										I turn messy, unstructured web data into clean, queryable
+										datasets and vector-ready metadata that plug directly into
+										custom RAG systems and analytics stacks.
+									</p>
+								</div>
+							</div>
+
+							<div class="flex flex-wrap gap-3">
+								<a
+									href="#projects"
+									class="inline-flex items-center gap-2 rounded-full bg-teal-500 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-teal-500/20 hover:bg-teal-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+								>
+									<i class="fa-solid fa-diagram-project text-sm" aria-hidden="true"></i>
+									<span>View Projects</span>
+								</a>
+								<a
+									href="mailto:hazemkshoaib@gmail.com?subject=Freelance%20Data%20Project%20Inquiry&body=Hi%20Hazem%2C%0A%0AI'd%20like%20to%20discuss%20a%20data%20project%20with%20you.%0A%0A"
+									class="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/60 px-5 py-2.5 text-sm font-semibold text-slate-100 hover:border-teal-500 hover:text-teal-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+								>
+									<i class="fa-solid fa-paper-plane text-sm" aria-hidden="true"></i>
+									<span>Hire Me</span>
+								</a>
+							</div>
+
+							<div class="flex flex-wrap items-center gap-3 text-xs text-slate-400">
+								<span class="inline-flex items-center gap-2">
+									<i class="fa-solid fa-spider-web text-teal-400" aria-hidden="true"></i>
+									Web scraping
+								</span>
+								<span class="inline-flex items-center gap-2">
+									<i class="fa-solid fa-gears text-teal-400" aria-hidden="true"></i>
+									Automated ETL
+								</span>
+								<span class="inline-flex items-center gap-2">
+									<i class="fa-solid fa-chart-line text-teal-400" aria-hidden="true"></i>
+									Predictive models
+								</span>
+							</div>
+						</div>
+
+						<!-- Hero Visual -->
+						<div
+							class="relative"
+							data-animate="fade-up"
+							data-animate-delay="100"
+						>
+							<div
+								class="relative rounded-2xl border border-slate-800/80 bg-slate-900/70 p-5 shadow-[0_0_60px_rgba(15,23,42,0.8)]"
+							>
+								<div class="flex items-center justify-between pb-4">
+									<div class="flex items-center gap-2 text-xs text-slate-400">
+										<span class="inline-flex h-2 w-2 rounded-full bg-teal-400/80"></span>
+										<span>Data Stack Snapshot</span>
+									</div>
+									<span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px] uppercase tracking-wide text-teal-300">
+										Real-world projects
+									</span>
+								</div>
+
+								<dl class="space-y-4 text-xs text-slate-300">
+									<div class="flex items-start justify-between gap-4">
+										<dt class="flex items-center gap-2 font-medium">
+											<i class="fa-solid fa-cloud-arrow-down text-teal-400" aria-hidden="true"></i>
+											Data Extraction
+										</dt>
+										<dd class="text-right text-slate-400">
+											Python · Scrapy · Playwright
+										</dd>
+									</div>
+									<div class="flex items-start justify-between gap-4">
+										<dt class="flex items-center gap-2 font-medium">
+											<i class="fa-solid fa-database text-teal-400" aria-hidden="true"></i>
+											Pipelines &amp; Storage
+										</dt>
+										<dd class="text-right text-slate-400">
+											ETL · SQL · JSON APIs
+										</dd>
+									</div>
+									<div class="flex items-start justify-between gap-4">
+										<dt class="flex items-center gap-2 font-medium">
+											<i class="fa-solid fa-brain text-teal-400" aria-hidden="true"></i>
+											Analysis &amp; ML
+										</dt>
+										<dd class="text-right text-slate-400">
+											Pandas · NumPy · Scikit-Learn
+										</dd>
+									</div>
+								</dl>
+
+								<div class="mt-6 flex items-center justify-between text-[11px] text-slate-400">
+									<span class="inline-flex items-center gap-1">
+										<i class="fa-solid fa-check-circle text-teal-400" aria-hidden="true"></i>
+										Production-ready data
+									</span>
+									<span class="inline-flex items-center gap-1">
+										<i class="fa-solid fa-clock text-teal-400" aria-hidden="true"></i>
+										Automation-first mindset
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- About & Skills Section -->
+			<section
+				id="about"
+				class="border-b border-slate-800/60 bg-slate-950/80"
+			>
+				<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+					<div class="space-y-12">
+						<!-- About -->
+						<div data-animate="fade-up">
+							<h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">
+								About
+							</h2>
+							<p class="mt-2 text-sm uppercase tracking-[0.25em] text-slate-400">
+								Who I work with and how I help
+							</p>
+							<p class="mt-6 text-sm sm:text-base text-slate-300 leading-relaxed">
+								As a Computer Science student with hands-on experience in
+								automated data ingestion and applied machine learning, I help
+								businesses solve their hardest AI bottleneck: data preparation. I
+								build end-to-end pipelines that turn unstructured web data into
+								scalable, clean databases ready for RAG systems.
+							</p>
+							<p class="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed">
+								I enjoy partnering with founders, small teams, and analysts who
+								need clean, well-structured datasets and clear performance
+								metrics—without spending months on data plumbing. My work is
+								grounded in writing maintainable Python, understanding business
+								context, and shipping value quickly.
+							</p>
+
+							<!-- Education -->
+							<div class="mt-6 space-y-3">
+								<h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
+									Education
+								</h3>
+								<ul class="space-y-2 text-sm text-slate-300">
+									<li class="flex items-start gap-2">
+										<span class="mt-1 h-1.5 w-1.5 rounded-full bg-teal-400"></span>
+										<span>
+											B.Sc. Computer Science (Undergraduate)
+										</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="mt-1 h-1.5 w-1.5 rounded-full bg-teal-400"></span>
+										<span>
+											Data Engineering Track – Digital Egypt Pioneers Initiative (DEPI)
+										</span>
+									</li>
+								</ul>
+							</div>
+
+							<!-- Services Offered -->
+							<div class="mt-6 space-y-3">
+								<h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
+									Services
+								</h3>
+								<ul class="space-y-2 text-sm text-slate-300">
+									<li class="flex items-start gap-2">
+										<span class="mt-1 h-1.5 w-1.5 rounded-full bg-teal-400"></span>
+										<span>
+											Web scraping and data extraction from complex, JavaScript-heavy websites.
+										</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="mt-1 h-1.5 w-1.5 rounded-full bg-teal-400"></span>
+										<span>
+											End-to-end data pipelines that turn raw web data into clean SQL/JSON datasets.
+										</span>
+									</li>
+									<!-- <li class="flex items-start gap-2">
+										<span class="mt-1 h-1.5 w-1.5 rounded-full bg-teal-400"></span>
+										<span>
+											RAG-ready data preparation: LLM-based text structuring and metadata generation.
+										</span>
+									</li> -->
+									<li class="flex items-start gap-2">
+										<span class="mt-1 h-1.5 w-1.5 rounded-full bg-teal-400"></span>
+										<span>
+											Analytics support: metrics, dashboards, and reports built on top of your data.
+										</span>
+									</li>
+								</ul>
+							</div>
+
+							<div class="mt-6 flex flex-wrap items-center gap-3">
+								<a
+									href="./Resume_01_03_26.pdf"
+									download="Hazem_Shoaib_CV.pdf"
+									class="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/70 px-4 py-2 text-xs font-semibold text-slate-100 hover:border-teal-500 hover:text-teal-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+								>
+									<i class="fa-solid fa-file-arrow-down text-sm" aria-hidden="true"></i>
+									<span>Download CV</span>
+								</a>
+								<p class="text-xs text-slate-400">
+									Opens my latest resume as a downloadable PDF.
+								</p>
+							</div>
+						</div>
+
+						<!-- Skills -->
+						<div id="skills" data-animate="fade-up" data-animate-delay="75">
+							<h3 class="text-xl sm:text-2xl font-semibold tracking-tight">
+								Skills &amp; Tools
+							</h3>
+							<p class="mt-2 text-sm text-slate-400">
+								A focused toolkit for scraping, transforming, and modeling data.
+							</p>
+
+							<div
+								class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3 text-sm"
+							>
+								<!-- Data Extraction & AI -->
+								<div
+									class="rounded-xl border border-slate-800 bg-slate-900/60 p-4 backdrop-blur-sm"
+									data-animate="fade-up"
+									data-animate-delay="100"
+								>
+									<div class="flex items-center gap-2">
+										<div
+											class="flex h-8 w-8 items-center justify-center rounded-full bg-teal-500/10 text-teal-400"
+										>
+											<i class="fa-solid fa-cloud-arrow-down text-sm"></i>
+										</div>
+										<h4 class="text-sm font-semibold">Data Extraction &amp; AI</h4>
+									</div>
+									<p class="mt-3 text-xs text-slate-400">
+										Robust web scraping for static and dynamic websites.
+									</p>
+									<div class="mt-3 flex flex-wrap gap-2">
+										<span
+											class="inline-flex items-center rounded-full border border-teal-500/40 bg-slate-950/60 px-3 py-1 text-[11px] font-medium text-teal-300"
+										>
+											Python
+										</span>
+										<span
+											class="inline-flex items-center rounded-full border border-teal-500/40 bg-slate-950/60 px-3 py-1 text-[11px] font-medium text-teal-300"
+										>
+											Scrapy
+										</span>
+										<span
+											class="inline-flex items-center rounded-full border border-teal-500/40 bg-slate-950/60 px-3 py-1 text-[11px] font-medium text-teal-300"
+										>
+											Playwright
+										</span>
+										<span
+											class="inline-flex items-center rounded-full border border-teal-500/40 bg-slate-950/60 px-3 py-1 text-[11px] font-medium text-teal-300"
+										>
+											LLM Data Structuring
+										</span>
+										<span
+											class="inline-flex items-center rounded-full border border-teal-500/40 bg-slate-950/60 px-3 py-1 text-[11px] font-medium text-teal-300"
+										>
+											RAG Prep
+										</span>
+										<span
+											class="inline-flex items-center rounded-full border border-teal-500/40 bg-slate-950/60 px-3 py-1 text-[11px] font-medium text-teal-300"
+										>
+											JSON
+										</span>
+									</div>
+								</div>
+
+								<!-- Data Analysis & ML -->
+								<div
+									class="rounded-xl border border-slate-800 bg-slate-900/60 p-4 backdrop-blur-sm"
+									data-animate="fade-up"
+									data-animate-delay="150"
+								>
+									<div class="flex items-center gap-2">
+										<div
+											class="flex h-8 w-8 items-center justify-center rounded-full bg-teal-500/10 text-teal-400"
+										>
+											<i class="fa-solid fa-brain text-sm"></i>
+										</div>
+										<h4 class="text-sm font-semibold">Data Analysis &amp; ML</h4>
+									</div>
+									<p class="mt-3 text-xs text-slate-400">
+										From exploratory analysis to baseline predictive models.
+									</p>
+									<div class="mt-3 flex flex-wrap gap-2">
+										<span
+											class="inline-flex items-center rounded-full border border-teal-500/40 bg-slate-950/60 px-3 py-1 text-[11px] font-medium text-teal-300"
+										>
+											Pandas
+										</span>
+										<span
+											class="inline-flex items-center rounded-full border border-teal-500/40 bg-slate-950/60 px-3 py-1 text-[11px] font-medium text-teal-300"
+										>
+											NumPy
+										</span>
+										<span
+											class="inline-flex items-center rounded-full border border-teal-500/40 bg-slate-950/60 px-3 py-1 text-[11px] font-medium text-teal-300"
+										>
+											Scikit-Learn
+										</span>
+										<span
+											class="inline-flex items-center rounded-full border border-teal-500/40 bg-slate-950/60 px-3 py-1 text-[11px] font-medium text-teal-300"
+										>
+											SQL
+										</span>
+									</div>
+								</div>
+
+								<!-- Core Programming -->
+								<div
+									class="rounded-xl border border-slate-800 bg-slate-900/60 p-4 backdrop-blur-sm"
+									data-animate="fade-up"
+									data-animate-delay="200"
+								>
+									<div class="flex items-center gap-2">
+										<div
+											class="flex h-8 w-8 items-center justify-center rounded-full bg-teal-500/10 text-teal-400"
+										>
+											<i class="fa-solid fa-code text-sm"></i>
+										</div>
+										<h4 class="text-sm font-semibold">Core Programming</h4>
+									</div>
+									<p class="mt-3 text-xs text-slate-400">
+										Strong CS fundamentals and multi-language experience.
+									</p>
+									<div class="mt-3 flex flex-wrap gap-2">
+										<span
+											class="inline-flex items-center rounded-full border border-teal-500/40 bg-slate-950/60 px-3 py-1 text-[11px] font-medium text-teal-300"
+										>
+											C++
+										</span>
+										<span
+											class="inline-flex items-center rounded-full border border-teal-500/40 bg-slate-950/60 px-3 py-1 text-[11px] font-medium text-teal-300"
+										>
+											Java
+										</span>
+										<span
+											class="inline-flex items-center rounded-full border border-teal-500/40 bg-slate-950/60 px-3 py-1 text-[11px] font-medium text-teal-300"
+										>
+											JavaScript
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Projects Section -->
+			<section
+				id="projects"
+				class="border-b border-slate-800/60 bg-slate-950/90"
+			>
+				<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+					<div class="flex flex-col gap-4" data-animate="fade-up">
+						<h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">
+							Projects
+						</h2>
+						<p class="max-w-2xl text-sm sm:text-base text-slate-300">
+							Selected work in web scraping, data engineering, and applied machine
+							learning. These projects show how I move from messy, real-world
+							data to structured insights and automation.
+						</p>
+					</div>
+
+					<div class="mt-10 grid gap-8 md:grid-cols-2">
+						<!-- Project 1 -->
+						<article
+							class="flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/70 p-6 shadow-sm transition hover:-translate-y-1 hover:border-teal-500/70 hover:shadow-teal-500/20"
+							data-animate="fade-up"
+						>
+							<div class="space-y-4">
+								<div class="flex items-center justify-between gap-4">
+									<div class="flex items-center gap-3">
+										<div
+											class="flex h-9 w-9 items-center justify-center rounded-full bg-teal-500/10 text-teal-400"
+										>
+											<i class="fa-solid fa-scale-balanced text-sm"></i>
+										</div>
+										<h3 class="text-base font-semibold">
+											Government Legal Data Scraper
+										</h3>
+									</div>
+									<span class="rounded-full bg-slate-800 px-3 py-1 text-[11px] font-medium text-slate-300">
+										Data Extraction
+									</span>
+								</div>
+								<p class="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
+									Tech: Python, Scrapy, Playwright, JSON
+								</p>
+								<p class="text-sm text-slate-300 leading-relaxed">
+									Built an automated pipeline bypassing dynamic JavaScript to
+									extract 1,000+ government records into clean JSON/SQL formats,
+									enabling scalable downstream analytics and reliable legal
+									reporting.
+								</p>
+							</div>
+							<div class="mt-5 flex items-center justify-between text-xs text-slate-400">
+								<span class="inline-flex items-center gap-1">
+									<i class="fa-solid fa-gear text-teal-400"></i>
+									Fully automated
+								</span>
+								<span class="italic">Case study coming soon</span>
+							</div>
+						</article>
+
+						<!-- Project 2 -->
+						<article
+							class="flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/70 p-6 shadow-sm transition hover:-translate-y-1 hover:border-teal-500/70 hover:shadow-teal-500/20"
+							data-animate="fade-up"
+							data-animate-delay="50"
+						>
+							<div class="space-y-4">
+								<div class="flex items-center justify-between gap-4">
+									<div class="flex items-center gap-3">
+										<div
+											class="flex h-9 w-9 items-center justify-center rounded-full bg-teal-500/10 text-teal-400"
+										>
+											<i class="fa-solid fa-scale-unbalanced text-sm"></i>
+										</div>
+										<h3 class="text-base font-semibold">
+											Data Pipeline for AI Legal Consultant (RAG System)
+										</h3>
+									</div>
+									<span class="rounded-full bg-slate-800 px-3 py-1 text-[11px] font-medium text-slate-300">
+										RAG Pipeline
+									</span>
+								</div>
+								<p class="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
+									Tech: Python, Scrapy, Playwright, LLMs, JSON
+								</p>
+								<p class="text-sm text-slate-300 leading-relaxed">
+									Engineered the data ingestion layer for an AI legal assistant.
+									Built robust scrapers to extract thousands of laws from dynamic
+									government portals and utilized LLMs to structure raw
+									Arabic/English text into clean metadata for a RAG vector
+									database.
+								</p>
+							</div>
+							<div class="mt-5 flex items-center justify-between text-xs text-slate-400">
+								<span class="inline-flex items-center gap-1">
+									<i class="fa-solid fa-wand-magic-sparkles text-teal-400"></i>
+									NLP-ready datasets
+								</span>
+								<span class="italic">Case study coming soon</span>
+							</div>
+						</article>
+
+						<!-- Project 3 -->
+						<article
+							class="flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/70 p-6 shadow-sm transition hover:-translate-y-1 hover:border-teal-500/70 hover:shadow-teal-500/20"
+							data-animate="fade-up"
+						>
+							<div class="space-y-4">
+								<div class="flex items-center justify-between gap-4">
+									<div class="flex items-center gap-3">
+										<div
+											class="flex h-9 w-9 items-center justify-center rounded-full bg-teal-500/10 text-teal-400"
+										>
+											<i class="fa-solid fa-leaf text-sm"></i>
+										</div>
+										<h3 class="text-base font-semibold">
+											Environmental Data Analysis
+										</h3>
+									</div>
+									<span class="rounded-full bg-slate-800 px-3 py-1 text-[11px] font-medium text-slate-300">
+										Analytics
+									</span>
+								</div>
+								<p class="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
+									Tech: Python, Pandas, Matplotlib, Seaborn
+								</p>
+								<p class="text-sm text-slate-300 leading-relaxed">
+									Analyzed and visualized 5 years of satellite data to correlate
+									pollution trends with urban density, delivering regression-based
+									insights to support environmental planning and policy.
+								</p>
+							</div>
+							<div class="mt-5 flex items-center justify-between text-xs text-slate-400">
+								<span class="inline-flex items-center gap-1">
+									<i class="fa-solid fa-chart-simple text-teal-400"></i>
+									Visual reporting
+								</span>
+								<span class="italic">Case study coming soon</span>
+							</div>
+						</article>
+
+						<!-- Project 4 -->
+						<article
+							class="flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/70 p-6 shadow-sm transition hover:-translate-y-1 hover:border-teal-500/70 hover:shadow-teal-500/20"
+							data-animate="fade-up"
+							data-animate-delay="50"
+						>
+							<div class="space-y-4">
+								<div class="flex items-center justify-between gap-4">
+									<div class="flex items-center gap-3">
+										<div
+											class="flex h-9 w-9 items-center justify-center rounded-full bg-teal-500/10 text-teal-400"
+										>
+											<i class="fa-solid fa-book-open text-sm"></i>
+										</div>
+										<h3 class="text-base font-semibold">
+											Full-Stack Library Data Platform
+										</h3>
+									</div>
+									<span class="rounded-full bg-slate-800 px-3 py-1 text-[11px] font-medium text-slate-300">
+										Data Platform
+									</span>
+								</div>
+								<p class="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
+									Tech: Django, SQL, JavaScript, ETL
+								</p>
+								<p class="text-sm text-slate-300 leading-relaxed">
+									Designed a relational database schema and built ETL scripts to
+									track metrics like borrow rates, catalog coverage, and user churn
+									for a library system, powering data-informed product decisions.
+								</p>
+							</div>
+							<div class="mt-5 flex items-center justify-between text-xs text-slate-400">
+								<span class="inline-flex items-center gap-1">
+									<i class="fa-solid fa-database text-teal-400"></i>
+									ETL &amp; reporting
+								</span>
+								<span class="italic">Case study coming soon</span>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- Contact Section -->
+			<section
+				id="contact"
+				class="bg-slate-950/95"
+			>
+				<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+					<div
+						class="max-w-2xl space-y-4"
+						data-animate="fade-up"
+					>
+						<h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">
+							Let's talk about your data.
+						</h2>
+						<p class="text-sm sm:text-base text-slate-300">
+							Looking to automate your data collection or prep your messy data for
+							a custom AI/RAG system? Let's talk.
+						</p>
+						<p class="text-xs text-slate-400">
+							I typically respond to project inquiries within 24 hours.
+						</p>
+					</div>
+
+					<div
+						class="mt-8 grid gap-4 sm:grid-cols-3"
+						data-animate="fade-up"
+						data-animate-delay="50"
+					>
+						<!-- Email -->
+						<a
+							href="mailto:hazemkshoaib@gmail.com"
+							class="flex items-center gap-3 rounded-xl border border-slate-800 bg-slate-900/70 px-4 py-3 text-sm text-slate-100 transition hover:border-teal-500 hover:text-teal-400"
+						>
+							<span
+								class="flex h-10 w-10 items-center justify-center rounded-full bg-teal-500/10 text-teal-400"
+								aria-hidden="true"
+							>
+								<i class="fa-solid fa-envelope"></i>
+							</span>
+							<span class="flex flex-col">
+								<span class="font-semibold">Email</span>
+								<span class="text-xs text-slate-400">hazemkshoaib@gmail.com</span>
+							</span>
+						</a>
+
+						<!-- LinkedIn -->
+						<a
+							href="https://www.linkedin.com/in/hazem-shoaib/"
+							target="_blank"
+							rel="noreferrer"
+							class="flex items-center gap-3 rounded-xl border border-slate-800 bg-slate-900/70 px-4 py-3 text-sm text-slate-100 transition hover:border-teal-500 hover:text-teal-400"
+						>
+							<span
+								class="flex h-10 w-10 items-center justify-center rounded-full bg-teal-500/10 text-teal-400"
+								aria-hidden="true"
+							>
+								<i class="fa-brands fa-linkedin-in"></i>
+							</span>
+							<span class="flex flex-col">
+								<span class="font-semibold">LinkedIn</span>
+								<span class="text-xs text-slate-400">Connect with me</span>
+							</span>
+						</a>
+
+						<!-- GitHub -->
+						<a
+							href="https://github.com/HazemShoaib"
+							target="_blank"
+							rel="noreferrer"
+							class="flex items-center gap-3 rounded-xl border border-slate-800 bg-slate-900/70 px-4 py-3 text-sm text-slate-100 transition hover:border-teal-500 hover:text-teal-400"
+						>
+							<span
+								class="flex h-10 w-10 items-center justify-center rounded-full bg-teal-500/10 text-teal-400"
+								aria-hidden="true"
+							>
+								<i class="fa-brands fa-github"></i>
+							</span>
+							<span class="flex flex-col">
+								<span class="font-semibold">GitHub</span>
+								<span class="text-xs text-slate-400">See more code</span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer class="border-t border-slate-800/60 bg-slate-950 py-6 text-xs text-slate-500">
+			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+				<p>
+					&copy; 2026 Hazem Shoaib. All rights reserved.
+				</p>
+				<p class="text-[11px] text-slate-500/80">
+					Built with HTML5, Tailwind CSS, and vanilla JavaScript.
+				</p>
+			</div>
+		</footer>
+
+		<!-- Main JS -->
+		<script src="./script.js"></script>
+	</body>
+</html>
